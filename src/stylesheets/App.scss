@@ -1,0 +1,74 @@
+@use 'base';
+
+.app {
+  text-align: center;
+}
+
+.app-topbar{
+  max-width: 80%;
+  margin-left: 10%;
+}
+
+.app-header {
+  min-height: 6vh;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  font-size: calc(15px + 2.5vmin);
+  font-family: base.$title-font;
+  color: base.$title-color;
+}
+
+.app-header-link {
+  text-decoration: none;
+  color: base.$title-color;
+  &:visited{
+    text-decoration: none;
+    color: base.$title-color;
+  }
+  &:after {
+    background: none repeat scroll 0 0 transparent;
+    content: "";
+    display: block;
+    height: 2px;
+    left: 50%;
+    position: relative;
+    background: base.$header-underline-color;
+    transition: width 0.3s ease 0s, left 0.3s ease 0s;
+    width: 0;
+  }
+  &:hover:after { 
+    width: 100%; 
+    left: 0; 
+  }
+}
+
+.app-navbar {
+  min-height: 3vh;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  font-size: calc(9px + 1.5vmin);
+  font-family: base.$subtitle-font;
+  color: base.$subtitle-color;
+}
+
+.app-navbar-link {
+  text-decoration: none;
+  color: base.$subtitle-color;
+  padding: calc(1px + 0.5vmin) calc(2px + 1vw) calc(1px + 0.5vmin) calc(2px + 1vw);
+  transition: 0.5s;
+  border-radius: 10px;
+  border: 2px solid transparent;
+
+  &:visited{
+    text-decoration: none;
+    color: base.$subtitle-color;
+  }
+  &:hover { 
+    border-color: base.$navbar-underline-color;
+  }
+}

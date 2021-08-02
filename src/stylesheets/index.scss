@@ -1,0 +1,10 @@
+@use 'base';
+
+body {
+  margin: 0;
+  font: 100% base.$body-font;
+  color: base.$body-color;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: base.$bg-color;
+}
